@@ -10,3 +10,8 @@
 .wp-block-mindset-blocks-copyright {
   font-size: 0.875rem;
 }
+
+.copyright {
+  display: flex;
+  align-items: center;
+}

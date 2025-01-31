@@ -73,3 +73,10 @@ add_filter('image_size_names_choose', 'mindset_add_custom_image_sizes');
 // load our custom blocks
 
 require get_template_directory() . '/mindset-blocks/mindset-blocks.php';
+
+
+
+/**
+ * Custom Post Types & Custom Taxonomies
+ */
+require get_template_directory() . '/inc/post-types-taxonomies.php';
