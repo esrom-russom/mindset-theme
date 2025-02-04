@@ -1,0 +1,24 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-mindset-blocks-service-posts nav {
+	// background-color: #21759b;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 1rem;
+	gap: 1rem;
+	border: 5px solid #01ffff;
+
+	a {
+		flex: 1 1 calc(25% - 16px);
+		text-align: center;
+	}
+}
+.service-color {
+	background-color: #fff;
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "mindset-blocks/service-posts",
+  "version": "0.1.0",
+  "title": "Service Posts",
+  "category": "text",
+  "icon": "smiley",
+  "description": "service posts with navigation.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "mindset-blocks",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}
