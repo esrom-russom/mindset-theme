@@ -100,6 +100,53 @@ function mindset_register_custom_post_types()
     register_post_type('fwd-testimonial', $args);
 
     // job posting Cpt
+    $labels = array(
+        'name' => _x('Job Postings', 'post type general name', 'mindset-theme'),
+        'singular_name' => _x('Job Posting', 'post type singular name', 'mindset-theme'),
+        'add_new' => _x('Add New', 'job posting', 'mindset-theme'),
+        'add_new_item' => __('Add New Job Posting', 'mindset-theme'),
+        'edit_item' => __('Edit Job Posting', 'mindset-theme'),
+        'new_item' => __('New Job Posting', 'mindset-theme'),
+        'view_item' => __('View Job Posting', 'mindset-theme'),
+        'view_items' => __('View Job Postings', 'mindset-theme'),
+        'search_items' => __('Search Job Postings', 'mindset-theme'),
+        'not_found' => __('No job postings found.', 'mindset-theme'),
+        'not_found_in_trash' => __('No job postings found in Trash.', 'mindset-theme'),
+        'all_items' => __('All Job Postings', 'mindset-theme'),
+        'insert_into_item' => __('Insert into job posting', 'mindset-theme'),
+        'uploaded_to_this_item' => __('Uploaded to this job posting', 'mindset-theme'),
+        'menu_name' => _x('Job Postings', 'admin menu', 'mindset-theme'),
+        'filter_items_list' => __('Filter job postings list', 'mindset-theme'),
+        'items_list_navigation' => __('Job Postings list navigation', 'mindset-theme'),
+        'items_list' => __('Job Postings list', 'mindset-theme'),
+        'item_published' => __('Job posting published.', 'mindset-theme'),
+        'item_published_privately' => __('Job posting published privately.', 'mindset-theme'),
+        'item_revereted_to_draft' => __('Job posting reverted to draft.', 'mindset-theme'),
+        'item_trashed' => __('Job posting trashed.', 'mindset-theme'),
+        'item_scheduled' => __('Job posting scheduled.', 'mindset-theme'),
+        'item_updated' => __('Job posting updated.', 'mindset-theme'),
+        'item_link' => __('Job posting link.', 'mindset-theme'),
+        'item_link_description' => __('A link to a job posting.', 'mindset-theme'),
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'show_in_admin_bar' => true,
+        'show_in_rest' => true,
+        'query_var' => true,
+        'rewrite' => array('slug' => 'job-postings'),
+        'capability_type' => 'post',
+        'has_archive' => false,
+        'hierarchical' => false,
+        'menu_position' => 8,
+        'menu_icon' => 'dashicons-businessman',
+        'supports' => array('title', 'editor'),
+    );
+    register_post_type('fwd-job-posting', $args);
     // Services CPT
     $labels = array(
         'name' => _x('Services', 'post type general name', 'mindset-theme'),
@@ -225,7 +272,7 @@ function fwd_register_taxonomies()
         'rewrite' => array('slug' => 'featured'),
     );
 
-    register_taxonomy('fwd-featured', array('fwd-work'), $args);
+    register_taxonomy('fwd-featured', array('fwd-work', 'fwd-testimonial'), $args);
 
     // Add Service Category taxonomy
     $labels = array(

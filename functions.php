@@ -26,16 +26,16 @@ function mindset_enqueues()
         array('strategy' => 'defer')
     );
     // id for contact is 15
-    // if (is_page('contact')){
-    //     wp_enqueue_script (
-    //         'midset-scroll-to-top',
-    //         get_theme_file_uri('assets/js/scroll-to-top.js'),
-    //         array('mindset-scroll-to-top'),
-    //         '20250127',
-    //         array('strategy' => 'defer')
-    //     )
+    if (is_page(15)) {
+        wp_enqueue_script(
+            'midset-scroll-to-top',
+            get_theme_file_uri('assets/js/scroll-to-top-contact-page.js'),
+            array('mindset-scroll-to-top'),
+            '20250127',
+            array('strategy' => 'defer')
+        );
 
-    // }
+    }
 }
 add_action('wp_enqueue_scripts', 'mindset_enqueues');
 
