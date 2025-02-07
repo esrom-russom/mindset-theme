@@ -136,8 +136,12 @@ function fwd_render_testimonial_slider($attributes, $content)
 		'pagination' => $attributes['pagination'],
 		'navigation' => $attributes['navigation']
 	);
+
+	// Define a PHP variable for the CSS custom property
+	$arrow_color = isset($attributes['arrowColor']);
+	$style = "--arrow-color: {$arrow_color};";
 	?>
-	<div <?php echo get_block_wrapper_attributes(); ?>>
+	<div <?php echo get_block_wrapper_attributes(array('style' => $style)); ?>>
 		<script>
 			const swiper_settings = <?php echo json_encode($swiper_settings); ?>;
 		</script>
@@ -173,5 +177,4 @@ function fwd_render_testimonial_slider($attributes, $content)
 	<?php
 	return ob_get_clean();
 }
-
 ?>

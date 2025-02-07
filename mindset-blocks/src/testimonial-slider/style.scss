@@ -36,3 +36,12 @@
 	width: 1rem;
 	height: 1rem;
 }
+
+:root {
+	--swiper-navigation-color: #7ff6ff; // Define your custom property here
+}
+.swiper-button-next,
+.swiper-button-prev {
+	background-color: var(--arrow-color);
+	color: var(--arrow-color);
+}
