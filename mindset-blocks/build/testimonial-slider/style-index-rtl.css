@@ -903,7 +903,3 @@ button.swiper-pagination-bullet {
   background-color: var(--arrow-color);
   color: var(--arrow-color);
 }
-
-.wp-block-mindset-blocks-testimonial-slider .swiper-pagination-bullet {
-  background-color: var(--arrow-color);
-}
