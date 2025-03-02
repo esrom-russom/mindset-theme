@@ -9,6 +9,7 @@
     "description": "A slider of testimonials.",
     "example": {},
     "supports": {
+        "color": {},
         "html": false,
         "multiple": false
     },
@@ -16,10 +17,21 @@
         "navigation": {
             "type": "boolean",
             "default": true
+
         },
         "pagination": {
             "type": "boolean",
             "default": true
+        },
+
+        "arrowColor": {
+            "type": "string",
+            "default": "#000000"
+        },
+
+        "paginationColor": {
+            "type": "string",
+            "default": "#000000"
         }
     },
     "textdomain": "testimonial-slider",

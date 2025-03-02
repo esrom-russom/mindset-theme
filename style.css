@@ -60,8 +60,8 @@ article.wp-block-group::after {
 
 .page-id-11 .wp-block-pullquote {
 	font-size: var(--wp--preset--font-size--medium);
-    text-align: left;
-	background-color: #fff200;
+    text-align: center;
+	background-color: #50fff6;
 }
 
 .page-id-11 .wp-block-pullquote p {
@@ -120,3 +120,4 @@ article.wp-block-group::after {
         display:none;
     }
 }
+

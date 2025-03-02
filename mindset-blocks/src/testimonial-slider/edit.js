@@ -53,7 +53,7 @@ export default function Edit({ attributes, setAttributes }) {
                         colorSettings={[
                             {
                                 value: arrowColor,
-                                onChange: (color) => setAttributes({ arrowColor: color }),
+                                onChange: (value) => setAttributes({ arrowColor: value }),
                                 label: __('Arrow Color', 'testimonial-slider'),
                             },
                         ]}
@@ -75,7 +75,7 @@ export default function Edit({ attributes, setAttributes }) {
                     />
                 </PanelBody>
             </InspectorControls>
-            <div {...useBlockProps()} style={customStyles} attributes={attributes}>
+        <div {...useBlockProps( {style: customStyles} )} attributes={attributes}>
                 <ServerSideRender block="mindset-blocks/testimonial-slider" attributes={attributes} />
             </div>
         </>

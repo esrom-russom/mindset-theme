@@ -137,9 +137,9 @@ function fwd_render_testimonial_slider($attributes, $content)
 		'navigation' => $attributes['navigation']
 	);
 
-	// Define a PHP variable for the CSS custom property
-	$arrow_color = isset($attributes['arrowColor']);
-	$style = "--arrow-color: {$arrow_color};";
+
+	$arrow_color = $attributes['arrowColor'];
+	$style = "--arrow-color: " . $arrow_color . ";";
 	?>
 	<div <?php echo get_block_wrapper_attributes(array('style' => $style)); ?>>
 		<script>
